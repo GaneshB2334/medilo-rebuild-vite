@@ -1,148 +1,114 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-[hsl(var(--medical-blue-light))] to-white py-20">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-[#F8F9FA] py-20 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-muted-foreground">
-              Get in touch with our healthcare team. We're here to help you with any questions or concerns.
-            </p>
+          <div className="relative z-10">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#1a1a1a] mb-4">Contact Us</h1>
+            <div className="flex items-center gap-2 text-sm">
+              <a href="/" className="text-gray-600 hover:text-[#26B9DB]">Home</a>
+              <span className="text-gray-400">/</span>
+              <span className="text-[#26B9DB]">Contact Us</span>
+            </div>
           </div>
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute left-10 top-1/2 -translate-y-1/2 w-32 h-32 opacity-20">
+          <svg viewBox="0 0 100 100" className="w-full h-full">
+            <circle cx="50" cy="20" r="8" fill="#FFB347" />
+            <path d="M50 30 L45 45 L55 45 Z M40 50 L30 70 L50 70 Z M60 50 L50 70 L70 70 Z" fill="#4A90E2" stroke="#1a1a1a" strokeWidth="2"/>
+          </svg>
+        </div>
+        
+        <div className="absolute right-20 top-20 w-0 h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent border-b-[86px] border-b-[#26B9DB] opacity-80"></div>
+        
+        {/* Doctors Image on Right */}
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
+          <img 
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&h=600&fit=crop" 
+            alt="Medical Team" 
+            className="w-full h-full object-cover"
+          />
         </div>
       </section>
 
-      {/* Contact Info */}
-      <section className="py-20 bg-white">
+      {/* Contact Form Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[hsl(var(--medical-blue-light))] rounded-full flex items-center justify-center">
-                    <Phone className="w-8 h-8 text-[hsl(var(--medical-blue))]" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Phone</h3>
-                <p className="text-muted-foreground">(+2) 56 54 1453</p>
-                <p className="text-muted-foreground">(+2) 56 54 1454</p>
-              </CardContent>
-            </Card>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Doctor Image */}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=700&fit=crop" 
+                alt="Doctor" 
+                className="rounded-lg w-full"
+              />
+              <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-32 h-32">
+                <svg viewBox="0 0 100 100" className="w-full h-full text-[#26B9DB] opacity-20">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+              </div>
+            </div>
 
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[hsl(var(--medical-blue-light))] rounded-full flex items-center justify-center">
-                    <Mail className="w-8 h-8 text-[hsl(var(--medical-blue))]" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Email</h3>
-                <p className="text-muted-foreground">demo@example.com</p>
-                <p className="text-muted-foreground">info@medilo.com</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[hsl(var(--medical-blue-light))] rounded-full flex items-center justify-center">
-                    <MapPin className="w-8 h-8 text-[hsl(var(--medical-blue))]" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Location</h3>
-                <p className="text-muted-foreground">123 Medical Center</p>
-                <p className="text-muted-foreground">Healthcare City</p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardContent className="p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-[hsl(var(--medical-blue-light))] rounded-full flex items-center justify-center">
-                    <Clock className="w-8 h-8 text-[hsl(var(--medical-blue))]" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Working Hours</h3>
-                <p className="text-muted-foreground">Mon-Fri: 8AM - 8PM</p>
-                <p className="text-muted-foreground">24/7 Emergency</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Contact Form */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Right Side - Form */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Full Name</label>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-0.5 bg-[#26B9DB]"></div>
+                <span className="text-[#26B9DB] font-semibold uppercase tracking-wider text-sm">CONTACT US</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-8 leading-tight">
+                Meet Our Specialist This Doctor Meet
+              </h2>
+
+              <form className="space-y-5">
+                <div className="grid md:grid-cols-2 gap-5">
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-[hsl(var(--medical-blue))]"
-                    placeholder="Enter your name"
+                    placeholder="Your name"
+                    className="w-full px-5 py-4 rounded-lg bg-[#F8F9FA] border border-transparent focus:border-[#26B9DB] focus:bg-white focus:outline-none transition-colors text-[#1a1a1a] placeholder:text-gray-400"
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email Address</label>
                   <input 
                     type="email" 
-                    className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-[hsl(var(--medical-blue))]"
-                    placeholder="Enter your email"
+                    placeholder="Your email"
+                    className="w-full px-5 py-4 rounded-lg bg-[#F8F9FA] border border-transparent focus:border-[#26B9DB] focus:bg-white focus:outline-none transition-colors text-[#1a1a1a] placeholder:text-gray-400"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Phone Number</label>
+                
+                <div className="grid md:grid-cols-2 gap-5">
+                  <input 
+                    type="text" 
+                    placeholder="Your Subject"
+                    className="w-full px-5 py-4 rounded-lg bg-[#F8F9FA] border border-transparent focus:border-[#26B9DB] focus:bg-white focus:outline-none transition-colors text-[#1a1a1a] placeholder:text-gray-400"
+                  />
                   <input 
                     type="tel" 
-                    className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-[hsl(var(--medical-blue))]"
-                    placeholder="Enter your phone"
+                    placeholder="Your phone"
+                    className="w-full px-5 py-4 rounded-lg bg-[#F8F9FA] border border-transparent focus:border-[#26B9DB] focus:bg-white focus:outline-none transition-colors text-[#1a1a1a] placeholder:text-gray-400"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <textarea 
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-input focus:outline-none focus:ring-2 focus:ring-[hsl(var(--medical-blue))]"
-                    placeholder="Write your message"
-                  ></textarea>
-                </div>
+
+                <textarea 
+                  rows={6}
+                  placeholder="Your comments"
+                  className="w-full px-5 py-4 rounded-lg bg-[#F8F9FA] border border-transparent focus:border-[#26B9DB] focus:bg-white focus:outline-none transition-colors text-[#1a1a1a] placeholder:text-gray-400 resize-none"
+                ></textarea>
+
                 <Button 
                   type="submit"
-                  className="w-full bg-[hsl(var(--medical-blue))] hover:bg-[hsl(var(--medical-accent))] text-white"
+                  className="bg-[#26B9DB] hover:bg-[#1fa0c1] text-white px-10 py-6 rounded-full text-base font-medium"
                 >
-                  Send Message
+                  Send Request
                 </Button>
               </form>
             </div>
-
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Visit Our Location</h2>
-              <div className="bg-gray-200 rounded-lg h-[500px] flex items-center justify-center">
-                <p className="text-muted-foreground">Map placeholder - Integrate Google Maps here</p>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-
-      {/* Emergency Contact */}
-      <section className="py-20 bg-gradient-to-br from-[hsl(var(--medical-blue))] to-[hsl(var(--medical-blue-dark))] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Medical Emergency?</h2>
-          <p className="text-xl mb-8">
-            Call our 24/7 emergency hotline for immediate assistance
-          </p>
-          <a 
-            href="tel:+2565541453" 
-            className="inline-block bg-white text-[hsl(var(--medical-blue))] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors"
-          >
-            Emergency: (+2) 56 54 1453
-          </a>
         </div>
       </section>
     </div>
