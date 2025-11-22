@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Medilo</h3>
+            <h3 className="text-xl font-bold mb-4">Health24</h3>
             <p className="text-white/80 mb-4">
               Your trusted healthcare partner providing quality medical services with compassion and excellence.
             </p>
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/80">
-          <p>&copy; 2024 Medilo. All rights reserved.</p>
+          <p>&copy; 2025 Health24. All rights reserved.</p>
         </div>
       </div>
     </footer>
