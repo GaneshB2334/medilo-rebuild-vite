@@ -44,10 +44,10 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 bg-white rounded flex items-center justify-center">
-                  <div className="text-[#1e3a5f] font-bold text-xl">C24</div>
+                  <div className="text-[#1e3a5f] font-bold text-xl">H24</div>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl font-bold">care24</span>
+                  <span className="text-xl font-bold">Health24</span>
                   <span className="text-[10px] text-white/80">World Class Care. Centre Home</span>
                 </div>
               </div>
